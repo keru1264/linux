@@ -27,6 +27,10 @@
 
 #define ZYXEL_VENDOR_ID		0x0586
 #define ZYXEL_OMNINET_ID	0x1000
+/* ZyXEL OMNI 56K Plus */
+#define ZYXEL_OMNI_56KPLUS_ID   0x1500
+/* ZyXEL OMNI 56K DUO */
+#define ZYXEL_OMNI_56K_DUO_ID   0x1512
 /* This one seems to be a re-branded ZyXEL device */
 #define BT_IGNITIONPRO_ID	0x2000
 
@@ -44,6 +48,8 @@ static int omninet_port_remove(struct usb_serial_port *port);
 static const struct usb_device_id id_table[] = {
 	{ USB_DEVICE(ZYXEL_VENDOR_ID, ZYXEL_OMNINET_ID) },
 	{ USB_DEVICE(ZYXEL_VENDOR_ID, BT_IGNITIONPRO_ID) },
+	{ USB_DEVICE(ZYXEL_VENDOR_ID, ZYXEL_OMNI_56KPLUS_ID) },
+	{ USB_DEVICE(ZYXEL_VENDOR_ID, ZYXEL_OMNI_56K_DUO_ID) },
 	{ }						/* Terminating entry */
 };
 MODULE_DEVICE_TABLE(usb, id_table);
